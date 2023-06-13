@@ -3,18 +3,6 @@ import { ComponentsModule } from '../../components/components.module';
 
 //crear una interface para definir propiedades 
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
-
-
-@Component({
-  selector: 'app-page',
-  templateUrl: './page.page.html',
-  styleUrls: ['./page.page.scss'],
-})
 export class PagePage implements OnInit {
 //crear listado
 //componentes: anyy[] = [];
@@ -27,7 +15,7 @@ componentes: Componente[] = [
   redirectTo: '/action-sheet'
   },
   {
-  icon: 'logo-apple-appstore',
+  icon: 'alert-circle-outline',
   name: 'Alert',
   redirectTo: '/alert'
   },
@@ -35,7 +23,6 @@ componentes: Componente[] = [
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ActionSheetPageRoutingModule } from './action-sheet-routing.module';
+import { ActionSheetPageRoutingModule } from './ion-avatar-routing.module';
 
-import { ActionSheetPage } from './action-sheet.page';
-
+import { ActionSheetPage } from './ion-avatar.page';
+import { PagePageModule } from '../../inicio/page.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     ActionSheetPageRoutingModule
+
+    PagePageModule
   ],
   declarations: [ActionSheetPage]
 })

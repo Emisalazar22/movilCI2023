@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ActionSheetPage } from './action-sheet.page';
+import { IonavatarPage } from './ion-avatar.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ActionSheetPage
+    component: Ion-avatarPage
   }
 ];
 
