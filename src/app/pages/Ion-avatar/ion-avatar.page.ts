@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { IonAvatarController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-action-sheet',
-  templateUrl: './action-sheet.page.html',
-  styleUrls: ['./action-sheet.page.scss'],
+  selector: 'app-ion-avatar',
+  templateUrl: './ion-avatar.page.html',
+  styleUrls: ['./ion-avatar.page.scss'],
 })
 export class ActionSheetPage implements OnInit {
-  constructor(private actionSheetCtrl: ActionSheetController) { }
+  presentionavatar: any;
+  constructor(private IonavatarCtrl: ActionSheetController) { }
   
 
   ngOnInit() {
   }
 
   onClick() {
-    this.presentActionSheet();
+    this.presentionavatar();
   }
   //.actionSheetController.create
   async presentActionSheet() {
-  const actionSheet = await this.actionSheetCtrl.create({
+  const ionavatar = await this.ionavatarCtrl.create({
    header: 'Albumnes',
    backdropDismiss: false, //significa que no se puede cerrar, cunado se hace clic afuera del entorno
    cssClass: 'my-custom-class',
@@ -49,10 +50,10 @@ export class ActionSheetPage implements OnInit {
     console.log('Play clicked');
     }
     }, {
-    text: 'Favorite',
+    text: 'Save',
     icon: 'heart-outline',
     handler: () => {
-    console.log('Favorite clicked');
+    console.log('Save clicked');
     }
     }, {
     text: 'Cancel',
@@ -63,8 +64,8 @@ export class ActionSheetPage implements OnInit {
     }
     }]
     });
-    await actionSheet.present();
-    const { role, data } = await actionSheet.onDidDismiss();
+    await ionavatar.present();
+    const { role, data } = await ionavatar.onDidDismiss();
     console.log('onDidDismiss resolved with role and data', role, data);
   }
 
